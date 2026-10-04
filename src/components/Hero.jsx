@@ -77,7 +77,6 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero" aria-labelledby="hero-title">
-      <div className="hero__stripes" aria-hidden="true" />
       <div className="container hero__grid">
         <div className="hero__copy">
           <p className="hero__mark mono" data-reveal>
@@ -110,6 +109,7 @@ export default function Hero() {
         </div>
 
         <div className="hero__visual" data-reveal>
+          <div className="hero__stripes" aria-hidden="true" />
           <div className="hero__photo cut">
             <img
               src={img('hero')}
