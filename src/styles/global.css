@@ -546,16 +546,19 @@ ol {
     repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 6px);
 }
 
-/* Диагональные «гоночные» полосы за фото */
+/* Диагональный след протектора за фото: направленный V-рисунок, плитка 160×44 */
 .hero__stripes {
   position: absolute;
-  top: -10%;
-  bottom: -10%;
-  right: 12%;
-  width: 150px;
-  background: linear-gradient(90deg, var(--c-red) 0 62%, transparent 62% 76%, var(--c-red) 76% 100%);
-  transform: skewX(-18deg);
-  opacity: 0.9;
+  top: -18%;
+  bottom: -18%;
+  right: 11%;
+  width: 160px;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='44' viewBox='0 0 160 44'><g fill='%23e3141b'><path d='M6 0L76 24V50L6 26Z'/><path d='M154 0L84 24V50L154 26Z'/><path d='M6 -44L76 -20V6L6 -18Z'/><path d='M154 -44L84 -20V6L154 -18Z'/></g></svg>") 0 0 / 160px 44px repeat-y;
+  transform: rotate(18deg);
+  opacity: 0.88;
+  /* след «стирается» к краям */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 7%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 7%, #000 90%, transparent 100%);
 }
 
 .hero__grid {
@@ -1646,7 +1649,7 @@ ol {
 /* ---------- Подвал ---------- */
 .footer {
   padding: clamp(56px, 7vw, 88px) 0 calc(28px + env(safe-area-inset-bottom));
-  background: #08090a;
+  background: linear-gradient(180deg, rgba(8, 9, 10, 0.72), rgba(8, 9, 10, 0.5));
   border-top: 1px solid var(--c-line);
   overflow: hidden;
 }
@@ -1902,6 +1905,41 @@ ol {
 [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Десктоп и ноутбук: первый экран подстраивается под высоту окна,
+   чтобы бегущая строка под ним была видна без прокрутки */
+@media (min-width: 981px) {
+  .hero {
+    min-height: calc(100svh - 92px);
+    padding-top: calc(var(--header-h) + clamp(20px, 5vh, 64px));
+    padding-bottom: clamp(44px, 6vh, 72px);
+  }
+
+  .hero .h1 {
+    font-size: clamp(44px, min(7.4vw, 10.5vh), 100px);
+  }
+
+  .hero__mark {
+    margin-bottom: clamp(14px, 3vh, 26px);
+  }
+
+  .hero__lead {
+    margin-top: clamp(16px, 3vh, 28px);
+  }
+
+  .hero__actions {
+    margin-top: clamp(20px, 4vh, 36px);
+  }
+
+  .hero__facts {
+    margin-top: clamp(16px, 3vh, 32px);
+  }
+
+  /* фото 4:5.2 — ширина от доступной высоты */
+  .hero__visual {
+    width: min(100%, 470px, calc((100svh - 240px) * 0.77));
+  }
 }
 
 /* ---------- Адаптив ---------- */
