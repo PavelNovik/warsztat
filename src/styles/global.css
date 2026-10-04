@@ -546,16 +546,17 @@ ol {
     repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 6px);
 }
 
-/* Диагональный след протектора за фото: направленный V-рисунок, плитка 160×44.
+/* Диагональный след протектора за фото: красная плитка с прозрачностью (scripts/tread.js),
+   повторяется по вертикали без швов.
    Привязан к блоку с фото: на ноутбуках идёт слева от фото (в промежутке до текста),
    на широких экранах и планшетах — справа. Сверху и снизу обрезается краями hero. */
 .hero__stripes {
   position: absolute;
   top: -75%;
   bottom: -75%;
-  right: calc(100% + 28px);
-  width: 120px;
-  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='44' viewBox='0 0 160 44'><g fill='%23e3141b'><path d='M6 0L76 24V50L6 26Z'/><path d='M154 0L84 24V50L154 26Z'/><path d='M6 -44L76 -20V6L6 -18Z'/><path d='M154 -44L84 -20V6L154 -18Z'/></g></svg>") 0 0 / 100% auto repeat-y;
+  right: calc(100% + 4px);
+  width: 180px;
+  background: url(/images/tread.webp) 50% 0 / 100% auto repeat-y; /* npm run tread */
   transform: rotate(var(--tread-angle, 12deg));
   opacity: 0.88;
   /* след «стирается» к краям */
@@ -1956,8 +1957,8 @@ ol {
 @media (min-width: 1600px) {
   .hero__stripes {
     right: auto;
-    left: calc(100% + 60px);
-    width: 160px;
+    left: calc(100% + 30px);
+    width: 240px;
     --tread-angle: 18deg;
   }
 }
@@ -2071,7 +2072,8 @@ ol {
     top: -30%;
     bottom: -40%;
     right: auto;
-    left: calc(100% + 24px);
+    left: calc(100% - 10px);
+    width: 200px;
     --tread-angle: 18deg;
   }
 

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-server && node scripts/prerender.js",
     "preview": "vite preview",
-    "images": "node scripts/fetch-images.js"
+    "images": "node scripts/fetch-images.js",
+    "tread": "node scripts/tread.js"
   },
   "dependencies": {
     "@fontsource/martian-mono": "^5.2.0",
