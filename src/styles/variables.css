@@ -1,0 +1,35 @@
+/* Тёмная «гаражная» тема: карбон, графит, сигнальный красный, янтарь индикаторов.
+   Одна светлая секция («бетон») для ритма. Переключателя темы нет. */
+:root {
+  color-scheme: dark;
+  --c-carbon: #0e0f11; /* основной фон */
+  --c-graphite: #17191d; /* карточки */
+  --c-graphite-2: #212429; /* карточки при наведении, поля формы */
+  --c-text: #f2f2f0;
+  --c-muted: #a2a7af; /* ≈ 7.5:1 на карбоне */
+  --c-steel: #8a9099;
+  --c-line: rgba(242, 242, 240, 0.12);
+  --c-red: #e3141b; /* фон кнопок, плашки, крупный текст */
+  --c-red-dark: #b30f15; /* наведение; красный текст на светлом ≈ 5.7:1 */
+  --c-red-text: #ff4b4f; /* мелкий красный текст на тёмном ≈ 5.8:1 */
+  --c-amber: #ffb020; /* индикаторы, звёзды, предупреждение */
+  --c-ok: #3ddc84; /* «открыто» */
+  --c-concrete: #e9e7e3; /* светлая секция */
+  --c-concrete-2: #dedbd5;
+  --c-ink: #141518; /* текст на светлом */
+  --c-ink-muted: #55585e; /* ≈ 6:1 на бетоне */
+  --c-ink-line: rgba(20, 21, 24, 0.14);
+
+  --f-display: 'Tektur', 'Arial Narrow', system-ui, sans-serif;
+  --f-sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --f-mono: 'Martian Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --container: 1240px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section-y: clamp(80px, 10vw, 136px);
+  --header-h: 72px;
+  --cut: 18px; /* срез угла у карточек и кнопок */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* сигнальная штриховка, как на ограждении бокса */
+  --hazard: repeating-linear-gradient(-45deg, var(--c-red) 0 14px, var(--c-carbon) 14px 28px);
+}

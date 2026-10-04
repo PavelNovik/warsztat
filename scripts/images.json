@@ -1,0 +1,10 @@
+{
+  "hero": { "src": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f", "author": "Sten Rademaker", "user": "stenrademaker", "width": 1400 },
+  "workshop": { "src": "https://images.unsplash.com/photo-1771340012319-0b4fca008b54", "author": "Dextar Studio", "user": "dextarstudio", "width": 1600 },
+  "suspension": { "src": "https://images.unsplash.com/photo-1760836395763-25ea44ae8145", "author": "Erik Mclean", "user": "introspectivedsgn", "width": 1000 },
+  "tires": { "src": "https://images.unsplash.com/photo-1645445522156-9ac06bc7a767", "author": "Jimmy Nilsson Masth", "user": "jimmynilssonmasth", "width": 1000 },
+  "oil": { "src": "https://images.unsplash.com/photo-1771340742493-52fbd5476ccb", "author": "Dextar Studio", "user": "dextarstudio", "width": 1000 },
+  "brakes": { "src": "https://images.unsplash.com/photo-1760317890359-4e6bb111e501", "author": "Erik Mclean", "user": "introspectivedsgn", "width": 1000 },
+  "interior": { "src": "https://images.unsplash.com/photo-1554475130-b9114b7e0aac", "author": "Teddy O", "user": "teddy0110", "width": 1200 },
+  "parts": { "src": "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb", "author": "Tahamie Farooqui", "user": "tami171091", "width": 1200 }
+}
