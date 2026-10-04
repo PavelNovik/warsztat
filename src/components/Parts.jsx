@@ -1,4 +1,3 @@
-import { img, srcSet } from '../config.js'
 import { useLang } from '../i18n/index.jsx'
 import Icon from './Icon.jsx'
 import SectionHead from './SectionHead.jsx'
@@ -9,9 +8,6 @@ export default function Parts() {
   const p = t.parts
   return (
     <section id="parts" className="section parts" aria-labelledby="parts-title">
-      <div className="parts__bg" aria-hidden="true">
-        <img src={img('parts')} srcSet={srcSet('parts')} sizes="100vw" alt="" loading="lazy" decoding="async" />
-      </div>
       <div className="container">
         <SectionHead num="03" eyebrow={p.eyebrow} title={p.title} lead={p.lead} id="parts-title" />
         <div className="parts__grid">

@@ -6,5 +6,7 @@
   "oil": { "src": "https://images.unsplash.com/photo-1771340742493-52fbd5476ccb", "author": "Dextar Studio", "user": "dextarstudio", "width": 1000 },
   "brakes": { "src": "https://images.unsplash.com/photo-1760317890359-4e6bb111e501", "author": "Erik Mclean", "user": "introspectivedsgn", "width": 1000 },
   "interior": { "src": "https://images.unsplash.com/photo-1554475130-b9114b7e0aac", "author": "Teddy O", "user": "teddy0110", "width": 1200 },
-  "parts": { "src": "https://images.unsplash.com/photo-1702146713870-8cdd7ab983fb", "author": "Tahamie Farooqui", "user": "tami171091", "width": 1200 }
+  "bg-desktop": { "src": "https://images.unsplash.com/photo-1549979097-857842f77e55", "author": "Bruno van der Kraan", "user": "brunovdkraan", "width": 2400, "hide": [0.446, 0.503, 0.104, 0.036] },
+  "bg-tablet": { "src": "https://images.unsplash.com/photo-1610880846497-7257b23f6138", "author": "Damian Ochrymowicz", "user": "damian_ochrymowicz", "width": 1400 },
+  "bg-mobile": { "src": "https://images.unsplash.com/photo-1619448050541-da65595bd3c5", "author": "Jerry Kavan", "user": "jerrykavan", "width": 1000 }
 }

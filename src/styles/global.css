@@ -301,6 +301,36 @@ ol {
   box-shadow: 0 0 10px var(--c-red);
 }
 
+/* ---------- Фиксированный фон с Audi ---------- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100lvh; /* по большой высоте экрана — без скачков при скрытии адресной строки */
+  pointer-events: none;
+}
+
+.backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  opacity: 0.3;
+  filter: saturate(0.7);
+}
+
+/* затемнение по краям, чтобы текст читался поверх машины */
+.backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(14, 15, 17, 0.75) 0%, transparent 35%, transparent 65%, rgba(14, 15, 17, 0.6) 100%),
+    linear-gradient(180deg, rgba(14, 15, 17, 0.5) 0%, transparent 25%, transparent 70%, rgba(14, 15, 17, 0.7) 100%);
+}
+
 /* ---------- Шапка ---------- */
 .header {
   position: fixed;
@@ -513,8 +543,7 @@ ol {
   overflow: hidden;
   background:
     radial-gradient(900px 600px at 78% 40%, rgba(227, 20, 27, 0.18), transparent 65%),
-    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 6px),
-    var(--c-carbon);
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 6px);
 }
 
 /* Диагональные «гоночные» полосы за фото */
@@ -1079,33 +1108,6 @@ ol {
 }
 
 /* ---------- Запчасти ---------- */
-.parts {
-  overflow: hidden;
-}
-
-.parts__bg {
-  position: absolute;
-  inset: 0;
-}
-
-.parts__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.22;
-  filter: grayscale(1) contrast(1.2);
-}
-
-.parts__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, var(--c-carbon) 0%, rgba(14, 15, 17, 0.7) 40%, var(--c-carbon) 100%);
-}
-
-.parts .container {
-  position: relative;
-}
 
 .parts__grid {
   display: grid;
@@ -1210,7 +1212,8 @@ ol {
 
 /* ---------- Процесс ---------- */
 .process {
-  background: var(--c-graphite);
+  background: rgba(23, 25, 29, 0.72);
+  border-block: 1px solid var(--c-line);
 }
 
 .process__list {
@@ -2072,6 +2075,14 @@ ol {
 @media (max-width: 640px) {
   body {
     font-size: 16px;
+  }
+
+  .backdrop img {
+    object-position: 55% 60%;
+  }
+
+  .backdrop::after {
+    background: linear-gradient(180deg, rgba(14, 15, 17, 0.55) 0%, transparent 30%, transparent 70%, rgba(14, 15, 17, 0.7) 100%);
   }
 
   .logo__tag {

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import Backdrop from './components/Backdrop.jsx'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Ticker from './components/Ticker.jsx'
@@ -41,6 +42,7 @@ export default function App({ initialLang }) {
   return (
     <LangProvider lang={lang} setLang={setLang}>
       <SkipLink />
+      <Backdrop />
       <CookieConsent />
       <Header />
       <main id="main" tabIndex={-1}>
